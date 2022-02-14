@@ -39,12 +39,12 @@ RUN go get golang.org/x/tools/cmd/godoc                                 && \
     rm -rf /go/src/* /go/pkg
 
 # add dev user
-RUN adduser dev --disabled-password --gecos ""                          && \
-    echo "ALL            ALL = (ALL) NOPASSWD: ALL" >> /etc/sudoers     && \
-    chown -R dev:dev /home/dev /go
+#RUN adduser dev --disabled-password --gecos ""                          && \
+#    echo "ALL            ALL = (ALL) NOPASSWD: ALL" >> /etc/sudoers     && \
+#    chown -R dev:dev /home/dev /go
 
-USER dev
-ENV HOME /home/dev
+#USER dev
+#ENV HOME /home/dev
 
 # install vim plugins
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
