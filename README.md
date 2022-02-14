@@ -12,13 +12,17 @@ This Docker image adds [Go](https://golang.org/) tools and the following vim plu
 * [vim-easymotion](https://github.com/Lokaltog/vim-easymotion)
 * [NERD Commenter](https://github.com/scrooloose/nerdcommenter)
 
+## build
+  ```
+  docker build . -t govim
+  ```
 ## Usage
 
 Run this image from within your go workspace. You can than edit your project using `vim`, and usual go commands: `go build`, `go run`, etc. 
 
 ```
 cd your/go/workspace
-docker run --rm -tiv `pwd`:/go mbrt/golang-vim-dev
+docker run --rm -tiv `pwd`:/go govim
 ```
 
 ## Limitations
